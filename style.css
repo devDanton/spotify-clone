@@ -1,0 +1,271 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body * {
+  color: #b3b3b3;
+  font-family: CircularSp, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+#container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+#nav {
+  width: 278px;
+  height: 100%;
+  background-color: #000000;
+  font-weight: 700;
+}
+
+#nav .logo {
+  width: 100%;
+  height: max-content;
+  display: block;
+  padding: 24px;
+}
+
+#nav .logo svg {
+  display: block;
+  width: 131px;
+  height: 40px;
+}
+
+#nav .logo path {
+  color: white;
+}
+
+svg {
+  fill: currentColor;
+}
+
+.sub-nav {
+  height: max-content;
+  list-style: none;
+}
+
+.sub-nav li {
+  padding: 0 8px;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 16px;
+  height: 40px;
+  font-size: 14px;
+  gap: 16px;
+}
+
+.playlist {
+  padding: 24px 0 0 0;
+  height: max-content;
+}
+
+.playlist>div a {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 24px;
+  text-decoration: none;
+}
+
+.playlist>div>a>div {
+  width: 24px;
+  height: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #b2b2b2;
+}
+
+.playlist>div>a>.two {
+  color: white;
+  background: linear-gradient(135deg, #450af5, #c4efd9);
+}
+
+.playlist>div>a>div path {
+  color: #2c2c2c;
+}
+
+.playlist>div>a>.two path {
+  color: white;
+}
+
+.user-content {
+  height: max-content;
+  border-top: 1px solid #2c2c2c;
+  border-bottom: 1px solid #2c2c2c;
+  margin: 9px 24px 0;
+  padding: 8px 0;
+  height: 382.41px;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+.user-content::-webkit-scrollbar {
+  width: 0px;
+}
+
+.user-content ul {
+  list-style: none;
+  font-weight: 400;
+}
+
+.user-content ul>li {
+  height: 32px;
+  display: flex;
+  align-items: center;
+}
+
+#player {
+  position: absolute;
+  height: 90px;
+  width: 100%;
+  padding: 0 16px;
+  bottom: 0;
+  background-color: #181818;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.album {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.album img {
+  height: 56px;
+  width: 56px;
+  object-fit: cover;
+}
+
+.album>div:nth-child(2) {
+  height: 40px;
+  font-size: 12px;
+  margin: 0 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.album h3 {
+  font-size: 14px;
+}
+
+.album p {
+  font-size: 11px;
+}
+
+.album>.like path {
+  color: #1ed760;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+}
+
+.controls .icon:nth-child(3) {
+  background-color: white;
+  border-radius: 999px;
+  margin: 0 16px;
+}
+
+.controls .icon:nth-child(3) path {
+  color: black;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  height: 56px;
+  width: 534px;
+}
+
+.controls>div:nth-child(1) {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 8px 0;
+  gap: 8px;
+}
+
+.bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.bar input {
+  width: 100%;
+  height: 4px;
+}
+
+.bar input[type="range"] {
+  -webkit-appearance: none;
+  background-color: #ddd;
+  outline: none;
+}
+
+.bar input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #1ed760;
+  cursor: pointer;
+}
+
+/* Define a cor do polegar do controle de entrada "range" no navegador Edge */
+.bar input[type="range"]::-ms-thumb {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #1ed760;
+  cursor: pointer;
+}
+
+.bar span {
+  font-size: 11px;
+}
+
+.right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.right input {
+  height: 4px;
+  width: 93px;
+  background-color: #5e5e5e;
+}
+
+#content {
+  width: 100%;
+  height: 100%;
+}
