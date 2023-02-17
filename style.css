@@ -28,10 +28,14 @@ body {
 }
 
 #nav {
-  width: 393px;
+  min-width: 155px;
+  max-width: 393px;
   height: 90%;
   background-color: #000000;
   font-weight: 700;
+  resize: horizontal;
+  overflow: auto;
+  cursor: col-resize;
 }
 
 #nav .logo {
@@ -436,6 +440,19 @@ table th {
   padding: 0 0 16px 0;
 }
 
+table th:nth-child(5) {
+  width: 75px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+table td:nth-child(5) {
+  width: 90px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 table td {
   height: 56px;
   align-items: center;
@@ -456,6 +473,22 @@ table td {
   }
 
   #player .right {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+
+  table th:nth-child(3),
+  table td:nth-child(3) {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+
+  table th:nth-child(4),
+  table td:nth-child(4) {
     display: none;
   }
 }
