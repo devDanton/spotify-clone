@@ -487,6 +487,7 @@ table .music {
   display: flex;
   flex-direction: row;
   gap: 16px;
+  height: 56px;
 }
 
 table .music p:first-child {
@@ -523,6 +524,7 @@ table td:nth-child(5)>p {
 
 table tbody tr {
   height: 56px;
+  align-content: center;
 }
 
 table tbody tr:hover {
@@ -530,7 +532,7 @@ table tbody tr:hover {
 }
 
 table td {
-  align-items: center;
+  align-items: center
 }
 
 @media (max-width: 888px) {
