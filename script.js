@@ -3,3 +3,5 @@ function updateBackground(value) {
   var range = document.querySelector('input[type="range"]');
   range.style.background = 'linear-gradient(to right, #1ed760 0%, #1ed760 ' + value + '%, #5e5e5e ' + value + '%, #5e5e5e 100%)';
 }
+
+
