@@ -35,7 +35,12 @@ body {
   font-weight: 700;
   resize: horizontal;
   overflow: auto;
-  cursor: col-resize;
+  /* cursor: col-resize; */
+  scrollbar-width: 0;
+}
+
+#nav::-webkit-scrollbar {
+  display: none;
 }
 
 #nav .logo {
@@ -57,6 +62,11 @@ body {
 
 svg {
   fill: currentColor;
+}
+
+a:hover span,
+a:hover svg>path {
+  color: white;
 }
 
 .sub-nav {
@@ -114,13 +124,17 @@ svg {
   color: white;
 }
 
+.user-content li:hover .list {
+  color: white;
+  width: 100%;
+}
+
 .user-content {
-  height: max-content;
   border-top: 1px solid #2c2c2c;
   border-bottom: 1px solid #2c2c2c;
   margin: 9px 24px 0;
   padding: 8px 0;
-  height: 382.41px;
+  height: 500px;
   overflow-y: auto;
   scrollbar-width: none;
 }
@@ -135,9 +149,15 @@ svg {
 }
 
 .user-content ul>li {
-  height: 32px;
+  min-height: 32px;
   display: flex;
   align-items: center;
+}
+
+.user-content ul>li span {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 #player {
@@ -196,14 +216,27 @@ svg {
   border: none;
 }
 
+button.icon:hover path {
+  color: white;
+
+}
+
 .controls .icon:nth-child(3) {
   background-color: white;
   border-radius: 999px;
   margin: 0 16px;
 }
 
+.controls .icon:nth-child(3):hover {
+  background: none;
+}
+
 .controls .icon:nth-child(3) path {
   color: black;
+}
+
+.controls .icon:nth-child(3):hover path {
+  color: white;
 }
 
 .controls {
@@ -280,6 +313,7 @@ svg {
   height: 90%;
   overflow-y: auto;
   scrollbar-width: none;
+  background: #000000;
 }
 
 #content::-webkit-scrollbar {
@@ -402,14 +436,24 @@ svg {
   height: 100%;
 }
 
+.divider {
+  border-bottom: 1px solid grey;
+  width: 100%;
+  position: absolute;
+  top: 36px;
+  margin: 0 32px;
+}
+
 .table {
-  max-height: 1080px;
+  position: relative;
+  height: 100%;
+  padding-bottom: 10px;
 }
 
 table {
   width: 100%;
   height: 100%;
-  padding: 0 32px 0 16px;
+  padding: 0 32px 0 48px;
 }
 
 table img {
@@ -437,7 +481,7 @@ table th {
   text-align: left;
   font-size: 12px;
   font-weight: 400;
-  padding: 0 0 16px 0;
+  align-items: center;
 }
 
 table th:nth-child(5) {
@@ -453,8 +497,21 @@ table td:nth-child(5) {
   justify-content: space-between;
 }
 
-table td {
+table thead {
+  align-items: center;
+  height: 36px;
+}
+
+table tbody tr {
   height: 56px;
+}
+
+table tr:hover {
+  background-color: #5a5a5a;
+}
+
+table td {
+  height: 100%;
   align-items: center;
 }
 
